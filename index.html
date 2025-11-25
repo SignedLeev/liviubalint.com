@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liviu Balint - Recupero Merce Amazon FBA</title>
+    <meta name="description" content="Servizio specializzato di apertura casi Amazon per il recupero della merce smarrita o danneggiata. Supporto completo nelle casistiche più complesse con SOSFBA.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff9500;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 149, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 149, 0, 0.4);
+        }
+
+        .features {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .sosfba-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .sosfba-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .sosfba-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 50px;
+            border-radius: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        .sosfba-content h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .sosfba-content ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .sosfba-content li {
+            padding: 15px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .sosfba-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .process-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .process-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .contact-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2em;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .features h2,
+            .sosfba-section h2,
+            .process-section h2,
+            .contact-section h2 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .sosfba-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="hero">
+    <div class="container">
+        <img src="https://storage.googleapis.com/msgsndr/d29iNdRm50i4TSpdh39x/media/691eebd2d0b2eecad0b4dedb.png" alt="Liviu Balint Logo" style="max-width: 400px; width: 100%; height: auto; margin-bottom: 40px;">
+        <h1>Recupera la Tua Merce Amazon FBA</h1>
+        <p>Servizio specializzato nell'apertura casi Amazon per il recupero della merce smarrita o danneggiata</p>
+        <a href="#contatti" class="cta-button">Richiedi Consulenza Gratuita</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>Perché Scegliere il Mio Servizio</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Specializzazione Amazon FBA</h3>
+                <p>Esperienza consolidata nella gestione di casi complessi di merce smarrita o danneggiata nei centri logistici Amazon. Conosco ogni procedura e ogni dettaglio per massimizzare le possibilità di rimborso.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Supporto Completo</h3>
+                <p>Ti assisto in tutte le fasi del processo: dall'identificazione del problema, alla documentazione necessaria, fino all'ottenimento del rimborso. Non sarai mai solo.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3>Casistiche Complesse</h3>
+                <p>Mi specializzo nei casi più difficili che richiedono competenze avanzate e persistenza. Dove altri si fermano, io continuo fino al risultato.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Tecnologia SOSFBA</h3>
+                <p>Utilizzo il software SOSFBA per identificare automaticamente gli errori logistici e monitorare costantemente i tuoi pacchi FBA, garantendo zero perdite.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Analisi Approfondita</h3>
+                <p>Riconciliazione di tutte le transazioni: ordini, importi ricevuti, resi e rimozioni. Ogni discrepanza viene individuata e gestita.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Massimizza i Profitti</h3>
+                <p>Recupero ogni centesimo che ti spetta. Gli errori logistici di Amazon possono costarti migliaia di euro all'anno - io te li recupero.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sosfba-section">
+    <div class="container">
+        <h2>La Potenza del Software SOSFBA</h2>
+        <div class="sosfba-content">
+            <h3>Il Mio Strumento Professionale per il Tuo Successo</h3>
+            <p style="margin-bottom: 30px; font-size: 1.1em; color: #555;">
+                Ogni giorno migliaia di prodotti vengono persi nei centri logistici Amazon (FBA), e tra questi ci sono anche i tuoi. SOSFBA è la soluzione che utilizzo per monitorare, identificare e recuperare la tua merce smarrita.
+            </p>
+
+            <h3 style="margin-top: 40px;">Funzionalità Chiave:</h3>
+            <ul>
+                <li><strong>Monitoraggio Automatico 24/7</strong> - L'applicazione web monitora costantemente i tuoi pacchi FBA e identifica gli errori logistici in tempo reale</li>
+                <li><strong>Identificazione Errori Logistici</strong> - Sistema avanzato che individua automaticamente pacchi persi, danneggiati o discrepanze di inventario</li>
+                <li><strong>Riconciliazione Completa</strong> - Analisi di tutte le transazioni: ordini, importi ricevuti, resi e rimozioni per trovare ogni anomalia</li>
+                <li><strong>Report Dettagliati</strong> - Documentazione completa e professionale per supportare ogni richiesta di rimborso</li>
+                <li><strong>Gestione Rimborsi</strong> - Processo semplificato per richiedere e ottenere rimborsi da Amazon FBA</li>
+                <li><strong>Analisi Storica</strong> - Verifica anche i periodi passati per recuperare rimborsi che pensavi persi</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Vantaggi Concreti:</h3>
+            <ul>
+                <li>Risparmio di tempo prezioso - niente più ore passate a cercare manualmente errori</li>
+                <li>Elimina lo stress della gestione manuale delle discrepanze</li>
+                <li>Massimizza i profitti recuperando ogni euro che ti spetta</li>
+                <li>Zero rischi di perdere rimborsi per mancato monitoraggio</li>
+                <li>Tecnologia all'avanguardia al servizio del tuo business</li>
+            </ul>
+
+            <div style="background: white; padding: 30px; border-radius: 10px; margin-top: 40px;">
+                <p style="color: #667eea; font-weight: 600; font-size: 1.2em; margin-bottom: 15px;">
+                    ⚠️ Sapevi che...
+                </p>
+                <p style="color: #555; font-size: 1.1em;">
+                    Gli errori logistici di Amazon impattano economicamente su migliaia di aziende ogni anno. Molti venditori FBA perdono denaro senza nemmeno saperlo. Con SOSFBA e la mia esperienza, questo non ti succederà mai.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process-section">
+    <div class="container">
+        <h2>Come Funziona</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Contattami</h3>
+                <p>Chiamami o scrivimi una email. Analizzerò gratuitamente la tua situazione e verificherò se hai merce persa.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Analisi SOSFBA</h3>
+                <p>Connetto il tuo account Amazon Seller a SOSFBA e avvio il monitoraggio completo per identificare tutti gli errori logistici.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Apertura Casi</h3>
+                <p>Apro i casi Amazon con tutta la documentazione necessaria e gestisco la comunicazione fino all'ottenimento del rimborso.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Recupero Fondi</h3>
+                <p>Ottieni il tuo rimborso da Amazon. Semplice, veloce e senza stress. Paghi solo una percentuale sul successo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contatti">
+    <div class="container">
+        <h2>Recupera Subito la Tua Merce</h2>
+        <p style="font-size: 1.2em; margin-bottom: 40px; opacity: 0.95;">
+            Non lasciare che gli errori logistici di Amazon intacchino i tuoi profitti. Contattami oggi stesso per una consulenza gratuita.
+        </p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span style="font-size: 1.5em;">📧</span>
+                <a href="mailto:casi.liviu@gmail.com">casi.liviu@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span style="font-size: 1.5em;">📱</span>
+                <a href="tel:+393892814418">+39 389 281 4418</a>
+            </div>
+        </div>
+        <div style="margin-top: 50px;">
+            <a href="mailto:casi.liviu@gmail.com" class="cta-button" style="background: white; color: #667eea;">Richiedi Consulenza Gratuita</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Liviu Balint - Specialista Recupero Merce Amazon FBA</p>
+        <p style="margin-top: 10px; opacity: 0.8;">Supporto professionale per venditori Amazon in tutta Italia</p>
+    </div>
+</footer>
+</body>
+</html>
